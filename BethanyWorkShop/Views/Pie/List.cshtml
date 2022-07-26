@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<BethanyWorkShop.Models.Pie>
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+    @foreach(var pie in Model)
+    {
+       @* <div>
+            <h1>@pie.Name </h1>
+            <h2>@pie.Price.ToString() </h2>
+            <h3>@pie.Category.CategoryName </h3>
+        </div>*@
+
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+	        <div class="thumbnail">
+		        <img src="@pie.ImageThumbnailUrl" alt="">
+		        <div class="caption">
+			        <h3 class="pull-right">@pie.Price.ToString("c")</h3>
+			        <h3>
+				        <a>@pie.Name</a>
+			        </h3>
+			        <p>@pie.ShortDescription</p>
+		        </div>
+	        </div>
+        </div>
+    }
+
+
+    
+
+    </body>
+</html>
